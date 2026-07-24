@@ -15,4 +15,5 @@ where = ["src"]
 [project.optional-dependencies]
 test = [
     "pytest>=9,<10",
+    "pytest-cov>=7,<8",
 ]

@@ -12,6 +12,22 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Variables de entorno y secretos locales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Datos locales y copias temporales
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.bak
+
 # Instalación y empaquetado
 *.egg-info/
 build/

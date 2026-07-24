@@ -34,3 +34,16 @@ def test_normalizes_text_from_file(text_file):
     raw_text = text_file.read_text(encoding="utf-8")
 
     assert normalize_text(raw_text) == "hola"
+
+
+@pytest.fixture(scope="module")
+def shared_values():
+    return (" A ", " B ")
+
+
+def test_module_fixture_normalizes_first_value(shared_values):
+    assert normalize_text(shared_values[0]) == "a"
+
+
+def test_module_fixture_normalizes_second_value(shared_values):
+    assert normalize_text(shared_values[1]) == "b"
